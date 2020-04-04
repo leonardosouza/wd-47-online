@@ -1,0 +1,16 @@
+// PROJETO AGENDA (WORKFLOW)
+
+- preencher o nome
+- preencher o email
+- clicar no adicionar
+- aplicar uma validação
+- se for valido enviar para o backend (salvar)
+- se for invalido exibir erros
+- recuperar dados  e exibir na tabela
+
+// BACKEND
+                                   PROTOCOLO HTTP
+CREATE (CRIAR / SALVAR) -------->  http://localhost:7000/contacts POST
+READ (LEITURA / PEGAR) --------->  http://localhost:7000/contacts GET
+UPDATE (ATUALIZAÇÃO) ----------->  http://localhost:7000/contacts PUT/PATCH
+DELETE (EXCLUSÃO / APAGAR) ----->  http://localhost:7000/contacts DELETE

@@ -1,0 +1,16 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@doe.com",
+      "phone": "1234-5678"
+    },
+    {
+      "name": "John Papa Noel",
+      "email": "john@papa.com",
+      "phone": "91234-1234",
+      "id": 3
+    }
+  ]
+}
