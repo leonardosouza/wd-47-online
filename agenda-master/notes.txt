@@ -8,7 +8,7 @@
 - recuperar dados  e exibir na tabela (tabela)  - OK
 - permitir a remoção de um item cadastrado (excluir) - OK
 
-// BACKEND
+// BACKEND - API RESTful
                                    PROTOCOLO HTTP
 CREATE (CRIAR / SALVAR) -------->  http://localhost:7000/contacts POST
 READ (LEITURA / PEGAR) --------->  http://localhost:7000/contacts GET
