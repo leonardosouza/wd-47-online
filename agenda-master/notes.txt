@@ -1,16 +1,35 @@
 // PROJETO AGENDA (WORKFLOW)
 
-- preencher o nome
-- preencher o email
+- preencher o nome / email
 - clicar no adicionar
-- aplicar uma validação
-- se for valido enviar para o backend (salvar)
-- se for invalido exibir erros
-- recuperar dados  e exibir na tabela
+- aplicar uma validação - OK
+- se for invalido exibir erros (não salvar)
+- se for valido enviar para o backend (salvar)  - OK
+- recuperar dados  e exibir na tabela (tabela)  - OK
+- permitir a remoção de um item cadastrado (excluir) - OK
 
 // BACKEND
                                    PROTOCOLO HTTP
 CREATE (CRIAR / SALVAR) -------->  http://localhost:7000/contacts POST
 READ (LEITURA / PEGAR) --------->  http://localhost:7000/contacts GET
-UPDATE (ATUALIZAÇÃO) ----------->  http://localhost:7000/contacts PUT/PATCH
+UPDATE (EDITAR / ATUALIZAR) ---->  http://localhost:7000/contacts PUT/PATCH
 DELETE (EXCLUSÃO / APAGAR) ----->  http://localhost:7000/contacts DELETE
+
+// JAVASCRIPT - DOM (DOCUMENT OBJECT MODEL)
+
+window.document ou document
+
+// propriedades
+document.head
+document.body
+document.links
+document.forms
+document.images
+...
+
+// métodos
+document.getElementById()
+document.getElementsByTagName()
+document.getElementsByClassName()
+document.querySelector()
+document.querySelectorAll()

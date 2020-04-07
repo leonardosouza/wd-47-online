@@ -22,8 +22,8 @@ hr {
   background: #ffe6e6;
 }
 
-/* truque - exibir a mensagem ao lado 
+/* truque - exibir a mensagem ao lado
 quando o campo tiver a classe error */
 .pure-form input.error+span {
-  display: inline-block;  
+  display: inline-block;
 }
