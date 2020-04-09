@@ -50,6 +50,7 @@
         fetch(endpoint, config)
             .then(getContacts)
             .catch(genericError);
+r
     };
 
     var getContacts = function() {
@@ -67,14 +68,17 @@
 
     var getContactsSuccess = function(contacts) {
         ui.tableContacts.innerHTML = contacts.map(function(contact) {
+            // destructing - ES6
+            var { id, name, email, phone } = contact;
+
             return `<tr>
-                <td>${contact.id}</td>
-                <td>${contact.name}</td>
-                <td>${contact.email}</td>
-                <td>${contact.phone}</td>
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${phone}</td>
                 <td>
-                    <a href="#" data-action="edit" data-id="${contact.id}">Editar</a> | 
-                    <a href="#" data-action="remove" data-id="${contact.id}">Excluir</a>
+                    <a href="#" data-action="edit" data-id="${id}">Editar</a> | 
+                    <a href="#" data-action="remove" data-id="${id}">Excluir</a>
                 </td>
             </tr>`;
         }).join("");
@@ -106,14 +110,16 @@
     var handlerContact = function(e) {
         e.preventDefault();
 
-        console.log(e.target.dataset);
+        // destructuring - ES6
+        var { action, id } = e.target.dataset;
+        console.log(action, id);
 
-        if(e.target.dataset.action == "edit") {
-            editContact(e.target.dataset.id);
+        if(action == "edit") {
+            editContact(id);
         }
 
-        if(e.target.dataset.action == "remove") {
-            removeContact(e.target.dataset.id);
+        if(action == "remove") {
+            removeContact(id);
         }
     };
 

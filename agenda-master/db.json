@@ -1,12 +1,6 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john@doe.com",
-      "phone": "1234-5678"
-    },
-    {
       "name": "Leo",
       "email": "leo@glbo.com",
       "phone": "1234-5678",
@@ -17,30 +11,6 @@
       "email": "pedro@globo.com",
       "phone": "4321",
       "id": 8
-    },
-    {
-      "name": "Luan",
-      "email": "luan@ig.com.br",
-      "phone": "123456",
-      "id": 9
-    },
-    {
-      "name": "Gabriel",
-      "email": "gabriel@bol.com",
-      "phone": "12345",
-      "id": 10
-    },
-    {
-      "name": "Leo",
-      "email": "leo@souza.com",
-      "phone": "123",
-      "id": 24
-    },
-    {
-      "name": "Leandro",
-      "email": "leandro@leonardo.com",
-      "phone": "1234",
-      "id": 25
     }
   ]
 }
