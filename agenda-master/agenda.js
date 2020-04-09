@@ -32,6 +32,7 @@
             document.querySelector(".error").focus();
         } else {
             addContact(contact);
+            cleanFields();
         }
     };
 
@@ -71,11 +72,12 @@
                 <td>${contact.name}</td>
                 <td>${contact.email}</td>
                 <td>${contact.phone}</td>
-                <td><a href="#">Excluir</a></td>
+                <td>
+                    <a href="#" data-action="edit" data-id="${contact.id}">Editar</a> | 
+                    <a href="#" data-action="remove" data-id="${contact.id}">Excluir</a>
+                </td>
             </tr>`;
         }).join("");
-
-        cleanFields();
     };
 
     var cleanFields = function() {
@@ -86,8 +88,33 @@
         document.querySelector("input").focus();
     };
 
-    var removeContact = function() {
-        // TODO
+    var editContact = function(id) {
+        console.log(id);
+    };
+
+    var removeContact = function(id) {
+        var config = {
+            method: "DELETE",
+            headers: new Headers({ "Content-type": "application/json" })
+        };
+
+        fetch(`${endpoint}/${id}`, config)
+            .then(getContacts)
+            .catch(genericError);
+    };
+
+    var handlerContact = function(e) {
+        e.preventDefault();
+
+        console.log(e.target.dataset);
+
+        if(e.target.dataset.action == "edit") {
+            editContact(e.target.dataset.id);
+        }
+
+        if(e.target.dataset.action == "remove") {
+            removeContact(e.target.dataset.id);
+        }
     };
 
     var init = function() {
@@ -96,5 +123,6 @@
 
         // Mapping Event
         ui.buttonAdd.onclick = validateFields;
+        ui.tableContacts.onclick = handlerContact;
     }();
 })();
